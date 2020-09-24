@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import axios from 'axios'
 
 import FormInput from '../form-input/form-input.component'
+import CustomButton from '../custom-button/custom-button.component';
 
 import './sign-in.styles.scss';
 
@@ -75,7 +76,7 @@ const  SignIn = () => {
               required
           />
           <div className="buttons">
-            <button type="submit">Sign In</button>
+            <CustomButton type="submit">Sign In</CustomButton>
           </div>
         </form>
       </div>
