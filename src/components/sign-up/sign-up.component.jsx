@@ -1,6 +1,10 @@
 import React, { useState } from 'react'
 import axios from 'axios'
 
+import FormInput from '../form-input/form-input.component';
+
+import './sign-up.styles.scss'
+
 const SignUp = () => {
   const [userCredentials, setUserCredentials] = useState({
                                                 email: "",
@@ -32,6 +36,12 @@ const SignUp = () => {
       console.log("registration error", error)
     })
     event.preventDefault();
+    setUserCredentials({
+      email: "",
+      full_name: "",
+      password: "",
+      password_confirmation: ""
+    })
   }
 
   return (
@@ -39,7 +49,7 @@ const SignUp = () => {
         <h2>I already have an account</h2>
         <span>Sign in with your email and password</span>
         <form onSubmit={handleSubmit}>
-            <input
+            <FormInput
                 name='email'
                 type='email'
                 onChange={handleChange}
@@ -47,7 +57,7 @@ const SignUp = () => {
                 label='email'
                 required
             />
-            <input
+            <FormInput
                 name='password'
                 type='password'
                 value={password}
@@ -55,7 +65,7 @@ const SignUp = () => {
                 label='password'
                 required
             />
-            <input
+            <FormInput
                 name='password_confirmation'
                 type='password'
                 value={password_confirmation}
