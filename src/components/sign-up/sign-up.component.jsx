@@ -7,11 +7,11 @@ import './sign-up.styles.scss'
 
 const SignUp = () => {
   const [userCredentials, setUserCredentials] = useState({
-                                                email: "",
-                                                full_name: "",
-                                                password: "",
-                                                password_confirmation: "",
-                                              })
+    email: "",
+    full_name: "",
+    password: "",
+    password_confirmation: "",
+  })
 
   const { email, full_name, password, password_confirmation } = userCredentials;
 
@@ -46,8 +46,8 @@ const SignUp = () => {
 
   return (
     <div className="sign-up">
-        <h2>I already have an account</h2>
-        <span>Sign in with your email and password</span>
+        <h2>I don't have an account</h2>
+        <span>Sign up with your email and password</span>
         <form onSubmit={handleSubmit}>
             <FormInput
                 name='email'
@@ -56,6 +56,14 @@ const SignUp = () => {
                 value={email}
                 label='email'
                 required
+            />
+            <FormInput
+              name='fullname'
+              type='text'
+              handleChange={handleChange}
+              value={full_name}
+              label='full name'
+              required
             />
             <FormInput
                 name='password'
