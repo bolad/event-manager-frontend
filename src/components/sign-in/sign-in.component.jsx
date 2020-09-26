@@ -33,7 +33,7 @@ const  SignIn = () => {
       },
       { withCredentials: true }
       ).then(response => {
-        console.log("signin response", response)
+        console.log("signin response", response.data)
       }).catch(error => {
         console.log("signin error", error)
       })
@@ -58,14 +58,6 @@ const  SignIn = () => {
               value={email}
               label='email'
               required
-          />
-          <FormInput
-              name='full name'
-              type='text'
-              handleChange={handleChange}
-              value={full_name}
-              label='full name'
-              
           />
           <FormInput
               name='password'

@@ -59,14 +59,6 @@ const SignUp = () => {
               required
           />
           <FormInput
-            name='fullname'
-            type='text'
-            handleChange={handleChange}
-            value={full_name}
-            label='full name'
-            required
-          />
-          <FormInput
               name='password'
               type='password'
               value={password}
