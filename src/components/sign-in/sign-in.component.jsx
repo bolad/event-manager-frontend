@@ -10,12 +10,11 @@ const  SignIn = () => {
     
   const [userCredentials, setUserCredentials] = useState({
     email: "",
-    full_name: "",
     password: "",
     password_confirmation: "",
   })
 
-    const { email, full_name, password, password_confirmation } = userCredentials;
+    const { email, password, password_confirmation } = userCredentials;
 
     const handleChange = (event) => {
       const { name, value } = event.target
@@ -26,7 +25,6 @@ const  SignIn = () => {
       axios.post("http://localhost:3001/api/sessions", {
         user: {
           email,
-          full_name,
           password,
           password_confirmation
         }
@@ -40,7 +38,6 @@ const  SignIn = () => {
       event.preventDefault();
       setUserCredentials({
         email: "",
-        full_name: "",
         password: "",
         password_confirmation: ""
       })

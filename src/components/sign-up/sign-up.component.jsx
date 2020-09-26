@@ -7,14 +7,14 @@ import CustomButton from '../custom-button/custom-button.component';
 import './sign-up.styles.scss'
 
 const SignUp = () => {
+  const [user, setUser] = useState(null)
   const [userCredentials, setUserCredentials] = useState({
     email: "",
-    full_name: "",
     password: "",
     password_confirmation: "",
   })
 
-  const { email, full_name, password, password_confirmation } = userCredentials;
+  const { email, password, password_confirmation } = userCredentials;
 
   const handleChange = (event) => {
     const { name, value } = event.target
@@ -22,10 +22,11 @@ const SignUp = () => {
   }
 
   const handleSubmit = (event) => {
+    event.preventDefault();
+
     axios.post("http://localhost:3001/api/registrations", {
       user: {
         email,
-        full_name,
         password,
         password_confirmation
       }
@@ -33,16 +34,17 @@ const SignUp = () => {
     { withCredentials: true }
     ).then(response => {
       console.log("registration response", response)
+      const user = response.data
+      window.localStorage.setItem(
+        'loggedUser', JSON.stringify(user)
+      )
+
+      setUser(user)
+
     }).catch(error => {
       console.log("registration error", error)
     })
-    event.preventDefault();
-    setUserCredentials({
-      email: "",
-      full_name: "",
-      password: "",
-      password_confirmation: ""
-    })
+    
   }
 
   return (
@@ -75,7 +77,7 @@ const SignUp = () => {
               required
           />
           <div className="buttons">
-            <CustomButton type="submit">Sign In</CustomButton>
+            <CustomButton type="submit">Sign Up</CustomButton>
           </div>
         </form>
     </div>
