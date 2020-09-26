@@ -22,7 +22,7 @@ const App = () => {
 
   return (
     <div>
-    <Header />
+    <Header currentUser={currentUser} />
     <Switch>
       <Route exact path='/' component={HomePage} />
       <Route path='/events' component={EventsPage} />
