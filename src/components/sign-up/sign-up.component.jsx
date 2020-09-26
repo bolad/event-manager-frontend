@@ -40,7 +40,12 @@ const SignUp = () => {
       )
 
       setUser(user)
-
+      setUserCredentials({
+        email: "",
+        password: "",
+        password_confirmation: ""
+      })
+      
     }).catch(error => {
       console.log("registration error", error)
     })

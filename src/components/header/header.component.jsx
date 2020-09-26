@@ -2,10 +2,22 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { ReactComponent as Logo } from '../../assets/crown.svg';
 
+import axios from 'axios'
+
 import './header.styles.scss';
 
-const Header = ({currentUser}) => {
+const Header = ({currentUser, handleLogout}) => {
   
+  const handleLogoutClick = () => {
+    axios.delete("http://localhost:3001/api/logout", { withCredentials: true })
+      .then(response => {
+        handleLogout();
+      })
+      .catch(error => {
+        console.log("logout error", error)
+      })
+  }
+
   return(
     <div className='header'>
       <Link className='logo-container' to='/'>
@@ -19,7 +31,7 @@ const Header = ({currentUser}) => {
           CONTACT
         </Link>
         {currentUser ? (
-          <div className='option' >
+          <div className='option' onClick={() => handleLogoutClick()}>
           SIGN OUT
         </div>
       ) : (

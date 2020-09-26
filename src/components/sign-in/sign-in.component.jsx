@@ -7,7 +7,7 @@ import CustomButton from '../custom-button/custom-button.component';
 import './sign-in.styles.scss';
 
 const  SignIn = () => {
-    
+  const [user, setUser] = useState(null)
   const [userCredentials, setUserCredentials] = useState({
     email: "",
     password: "",
@@ -22,6 +22,8 @@ const  SignIn = () => {
     }
 
     const handleSubmit = (event) => {
+      event.preventDefault();
+
       axios.post("http://localhost:3001/api/sessions", {
         user: {
           email,
@@ -32,14 +34,19 @@ const  SignIn = () => {
       { withCredentials: true }
       ).then(response => {
         console.log("signin response", response.data)
+        const user = response.data
+        window.localStorage.setItem(
+          'loggedUser', JSON.stringify(user)
+        )
+
+        setUser(user)
+        setUserCredentials({
+          email: "",
+          password: "",
+          password_confirmation: ""
+        })
       }).catch(error => {
         console.log("signin error", error)
-      })
-      event.preventDefault();
-      setUserCredentials({
-        email: "",
-        password: "",
-        password_confirmation: ""
       })
     }
 

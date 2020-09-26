@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { Switch, Route, Redirect } from 'react-router-dom';
 
+import axios from 'axios';
+
 import HomePage from './pages/homepage/homepage.component';
 import EventsPage from './pages/events/events-page.component';
 import Header from './components/header/header.component';
@@ -20,9 +22,31 @@ const App = () => {
     }
   }, [])
 
+  const checkLoginStatus = () => {
+    axios.get("http://localhost:3001/api/logged_in", { withCredentials: true })
+      .then(response => {
+        console.log('logge in?', response)
+      })
+      .catch(error => {
+        console.log("check logged in error", error)
+      })
+  }
+
+  const handleLogout = () => {
+    window.localStorage.removeItem('loggedUser')
+    setCurrentUser(null)
+  }
+
+  useEffect(() => {
+    checkLoginStatus();
+  }, [])
+
   return (
     <div>
-    <Header currentUser={currentUser} />
+    <Header 
+      currentUser={currentUser}  
+      handleLogout={handleLogout}
+    />
     <Switch>
       <Route exact path='/' component={HomePage} />
       <Route path='/events' component={EventsPage} />
