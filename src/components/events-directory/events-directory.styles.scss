@@ -1,6 +1,52 @@
 .directory-menu {
-  width: 100%;
-  display: flex;
-  flex-wrap: wrap;
   justify-content: space-between;
+  display: flex;
+
+  .composition {
+    position: relative;
+
+    &__photo {
+        width: 55%;
+        box-shadow: 0 1.5rem 4rem rgba(#000, .4);
+        border-radius: 2px;
+        position: absolute;
+        z-index: 10;
+        transition: all .2s;
+        outline-offset: 1.2rem;
+
+        &--p1 {
+            left: 0; //move in 0px from the left side of the container
+            top: -2rem;
+        }
+        &--p2 {
+            right: 0; //move in 0px from the right side of the container
+            top: 2rem;
+        }
+        &--p3 {
+            left: 20%;
+            top: 10rem;
+        }
+        &--p4 {
+          left: 0;
+          top: 15rem;
+      }
+      &--p5 {
+        right: 0;
+        top: 18rem;
+    }
+
+        &:hover {
+            transform: scale(1.05) translateY(-.5rem);
+            box-shadow: 0 2.5rem 4rem rgba( #000, .5);
+            z-index: 20;
+            outline: 1.2rem solid #7ed56f;
+        }
+    }
+
+    //when u hover compsition, select the composition photo which is not hovered
+    &:hover &__photo:not(:hover) {
+        transform: scale(.95);
+    }
 }
+}
+
