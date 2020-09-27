@@ -70,7 +70,7 @@ const EventsDirectory = () => {
                 <img src="https://i.ibb.co/17Ybhzy/music2.jpg" alt="Photo 1" class="composition__photo composition__photo--p1" />
                 <img src="https://i.ibb.co/9Wx6FWD/sports.jpg" alt="Photo 2" class="composition__photo composition__photo--p2" />
                 <img src="https://i.ibb.co/D9L07MX/tech.jpg" alt="Photo 3" class="composition__photo composition__photo--p3" />
-                <img src="https://i.ibb.co/KqrJS40/doug-linstedt-j-EEYZsaxb-H4-unsplash.jpg" alt="Photo 3" class="composition__photo composition__photo--p4" />
+                <img src="https://i.ibb.co/CPDpp4z/blm3.jpg" alt="Photo 3" class="composition__photo composition__photo--p4" />
                 <img src="https://i.ibb.co/yq3Qr2D/mike-von-Osjura-Wm-Xm-U-unsplash.jpg" alt="Photo 3" class="composition__photo composition__photo--p5" />
             </div>
         </div>

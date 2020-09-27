@@ -7,6 +7,7 @@ import HomePage from './pages/homepage/homepage.component';
 import EventsPage from './pages/events/events-page.component';
 import Header from './components/header/header.component';
 import SignInAndSignUpPage from './pages/signin-sign-up/sign-in-and-sign-up.component';
+import Footer from './components/footer/footer.component';
 
 import './App.css';
 
@@ -62,6 +63,7 @@ const App = () => {
         }
         />
     </Switch>
+    <Footer />
   </div>
   );
   

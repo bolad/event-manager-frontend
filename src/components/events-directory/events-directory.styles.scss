@@ -7,7 +7,7 @@
 
     &__photo {
         width: 55%;
-        box-shadow: 0 1.5rem 4rem rgba(#000, .4);
+        box-shadow: 0 1.5rem 4rem rgba(#f7f7f7, .4);
         border-radius: 2px;
         position: absolute;
         z-index: 10;
@@ -16,7 +16,7 @@
 
         &--p1 {
             left: 0; //move in 0px from the left side of the container
-            top: -2rem;
+            top: -0.5rem;
         }
         &--p2 {
             right: 0; //move in 0px from the right side of the container
@@ -24,7 +24,7 @@
         }
         &--p3 {
             left: 20%;
-            top: 10rem;
+            top: 8rem;
         }
         &--p4 {
           left: 0;
@@ -46,6 +46,30 @@
     //when u hover compsition, select the composition photo which is not hovered
     &:hover &__photo:not(:hover) {
         transform: scale(.95);
+    }
+  }
+  .btn-text {
+    &:link,
+    &:visited {
+        font-size: 1.2rem;
+        color: #ffb900;
+        display: inline-block;
+        text-decoration: none;
+        border-bottom: 1px solid #ff7730;
+        padding: 3px;
+        transition: all .3s;
+    }
+
+    &:hover {
+        background-color: #ffb900;
+        color: #fff;
+        box-shadow: 0 1rem 2rem rgba(#000,.15);
+        transform: translateY(-2px) ;
+    }
+
+    &:active {
+        box-shadow: 0 .5rem 1rem rgba(#000,.15);
+        transform: translateY(0);
     }
 }
 }
