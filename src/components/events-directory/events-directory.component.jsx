@@ -46,15 +46,13 @@ const EventsDirectory = () => {
           {width: 'calc((100% - 6rem) / 2)'}
         }>
             <h3 class="heading-tertiary u-margin-bottom-small">
-                You are going to fall in love with nature
+                All your favourite events on one platform. Awesome!!!
             </h3>
             <p class="paragraph">
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magnam, nesciunt asperiores. Iusto mollitia nesciunt aut, quia distinctio labore quis nisi ut necessitatibus ipsam delectus error. Odio fugiat qui deserunt reprehenderit?
-            </p>
-            <h3 class="heading-tertiary u-margin-bottom-small">
-                Live adventures like you never have before
-            </h3>
-            <p class="paragraph">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
+                Magnam, nesciunt asperiores. Iusto mollitia nesciunt aut, 
+                quia distinctio labore quis nisi ut necessitatibus ipsam delectus 
+                error. Odio fugiat qui deserunt reprehenderit?
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. 
                 Eaque eligendi quasi perferendis harum reiciendis minus 
                 temporibus in at est, doloremque et vel, aut debitis, vitae 
