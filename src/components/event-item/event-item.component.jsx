@@ -2,9 +2,7 @@ import React from 'react';
 
 import './event-item.styles.scss';
 
-const EventItem = ({ item }) => {
-
-  const { name, price, alloted_tickets, start_date, start_time, imageUrl } = item;
+const EventItem = ({ name, price, alloted_tickets, start_date, start_time, imageUrl }) => {
 
   return (
     <div className="event-item">
