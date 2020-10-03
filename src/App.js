@@ -8,6 +8,7 @@ import EventsPage from './pages/events/events-page.component';
 import Header from './components/header/header.component';
 import SignInAndSignUpPage from './pages/signin-sign-up/sign-in-and-sign-up.component';
 import Footer from './components/footer/footer.component';
+import EventForm from './pages/event-form/event-form.component';
 
 import './App.css';
 
@@ -51,6 +52,7 @@ const App = () => {
     <Switch>
       <Route exact path='/' component={HomePage} />
       <Route path='/events' component={EventsPage} />
+      <Route path='/event-form' component={EventForm} />
       <Route 
         exact 
         path='/signin' 
