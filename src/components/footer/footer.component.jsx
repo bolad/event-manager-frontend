@@ -5,8 +5,8 @@ import './footer.styles.scss'
 const Footer = () => (
   <div class="footer">
     <p class="footer__copyright">
-            Copyright &copy; Stanley Akyea 
-        </p>
+        Copyright &copy; Stanley Akyea 
+    </p>
   </div>
 )
 

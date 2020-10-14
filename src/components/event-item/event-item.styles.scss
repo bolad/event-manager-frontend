@@ -1,28 +1,21 @@
-.event-item {
-  width: 22%;
-  display: flex;
+.card-container {
+  display: absolute;
   flex-direction: column;
-  height: 350px;
-  align-items: center;
+  background-color: #dacd95;
+  border-radius: 5px;
+  padding: 25px;
+  cursor: pointer;
+  -moz-osx-font-smoothing: grayscale;
+  backface-visibility: hidden;
+  transform: translateZ(0);
+  transition: transform 0.25s ease-out;
 
-  .background-image {
+  .card {
     width: 100%;
-    height: 95%;
-    background-size: cover;
-    background-position: center;
-    margin-bottom: 5px;
+    height: 100%;
   }
+}
 
-  .event-details {
-    width: 100%;
-    height: 5%;
-    display: flex;
-    justify-content: space-between;
-    font-size: 18px;
-
-    .name {
-      width: 90%;
-      margin-bottom: 15px;
-    }
-  }
+.card-container:hover {
+  transform: scale(1.05);
 }

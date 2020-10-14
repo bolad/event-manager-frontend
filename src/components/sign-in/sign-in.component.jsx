@@ -52,7 +52,7 @@ const  SignIn = () => {
 
     return (
       <div className="sign-in">
-        <h2>I already have an account</h2>
+        <h1 className="text-heading">I already have an account</h1>
         <span>Sign in with your email and password</span>
         <form onSubmit={handleSubmit}>
           <FormInput

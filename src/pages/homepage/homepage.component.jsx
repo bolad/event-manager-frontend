@@ -4,9 +4,12 @@ import EventsDirectory from '../../components/events-directory/events-directory.
 import './homepage.styles.scss'
 
 const HomePage = () => (
-  <div className="homepage">
-    <EventsDirectory />
-  </div>
+  <main class="mb-auto .-my-5 h-10">
+    <div className="homepage">
+      <EventsDirectory />
+    </div>
+  </main>
+ 
 );
 
 export default HomePage;
