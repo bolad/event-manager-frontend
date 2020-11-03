@@ -1,0 +1,77 @@
+<?xml version="1.0"?>
+<svg xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:svg="http://www.w3.org/2000/svg" id="svg4368" viewBox="0 0 197.27 220.55" version="1.1">
+  <defs id="defs4370">
+    <filter id="filter4321" width="1.2192" y="-.38535" x="-.10959" height="1.7707" color-interpolation-filters="sRGB">
+      <feGaussianBlur id="feGaussianBlur4323" stdDeviation="45.173287"/>
+    </filter>
+    <linearGradient id="linearGradient4117" y2="234.24" gradientUnits="userSpaceOnUse" x2="440.99" y1="764.85" x1="440.57">
+      <stop id="stop4113" stop-color="#008000" offset="0"/>
+      <stop id="stop4115" stop-color="#00d400" offset="1"/>
+    </linearGradient>
+    <filter id="filter4158" color-interpolation-filters="sRGB">
+      <feGaussianBlur id="feGaussianBlur4160" stdDeviation="1.5024706"/>
+    </filter>
+  </defs>
+  <g id="layer1" transform="translate(-33.785 -22.07)">
+    <g id="g4325" transform="matrix(.20043 0 0 .20043 30.185 51.207)">
+      <path id="path4319" opacity=".32766" stroke-linejoin="round" d="m1011.9 988.83c0 77.692-221.45 140.67-494.63 140.67s-494.63-62.982-494.63-140.67c0-77.692 221.45-140.67 494.63-140.67s494.63 62.982 494.63 140.67z" transform="matrix(.81472 0 0 .39610 88.62 464.29)" filter="url(#filter4321)" stroke="#000" stroke-linecap="round" stroke-width="2"/>
+      <g id="g4192">
+        <path id="path4164" stroke-linejoin="round" d="m284.85 225.38c41.466-229.95 160.16-358.38 229.5-358.38 68.966 0 62.888 126.48 22.177 355.19" stroke="#999" stroke-linecap="round" stroke-width="24.491" fill="none"/>
+        <path id="rect4119" stroke-linejoin="round" d="m178.96 221.17 31.682 666.01h461.74l20.136-15.666 23.826-4.0206c-2.9726-221.56 7.0293-424.63-3.8289-646.32z" stroke="#050" stroke-linecap="round" stroke-width="4.0033" fill="#2d5016"/>
+        <rect id="rect2985" stroke-linejoin="round" transform="matrix(1 0 -.049774 .99876 0 0)" height="665.72" width="558.36" stroke="#250" stroke-linecap="round" y="223.85" x="139.79" stroke-width="4.0025" fill="url(#linearGradient4117)"/>
+        <path id="path4138" opacity=".076596" d="m675.61 873.46 12.691-11.898 22.249 3.5456-10.697-543.26c1.4977 188.75-20.059 362.8-24.243 551.61z" transform="matrix(1 0 0 1.1271 0 -111.02)" filter="url(#filter4158)" fill="#d5ffd5"/>
+        <path id="path4172" stroke-linejoin="round" d="m311.34 257.92c0 5.9292-9.1324 10.736-20.398 10.736-11.265 0-20.398-4.8065-20.398-10.736 0-5.9292 9.1324-10.736 20.398-10.736 11.265 0 20.398 4.8065 20.398 10.736z" transform="matrix(.92623 0 0 1 20.821 -2.1471)" stroke="#0a0" stroke-linecap="square" stroke-width="2" fill="#d5ffd5"/>
+        <path id="path4174" stroke-linejoin="round" d="m311.34 257.92c0 5.9292-9.1324 10.736-20.398 10.736-11.265 0-20.398-4.8065-20.398-10.736 0-5.9292 9.1324-10.736 20.398-10.736 11.265 0 20.398 4.8065 20.398 10.736z" transform="matrix(.92623 0 0 1 272.02 -4.5529)" stroke="#0a0" stroke-linecap="square" stroke-width="2" fill="#d5ffd5"/>
+        <path id="path4176" stroke-linejoin="round" d="m290.32 249.43c0-211.57-6.3366-383.08 63.005-383.08 68.966 0 187.57 169.73 188.1 380.14" stroke="#999" stroke-linecap="round" stroke-width="23.492" fill="none"/>
+        <rect id="rect4180" opacity=".42979" stroke-linejoin="round" transform="matrix(1 0 -.054844 .99849 0 0)" height="474.16" width="438.19" stroke="#250" stroke-linecap="round" y="319.78" x="202.7" stroke-width="2.9924" fill="#008000"/>
+        <rect id="rect4190" opacity=".1" stroke-linejoin="round" transform="matrix(1 0 -.049774 .99876 0 0)" height="665.72" width="558.36" stroke="#250" stroke-linecap="round" y="223.85" x="139.79" stroke-width="4.0025" fill="#fff"/>
+      </g>
+    </g>
+  </g>
+  <metadata>
+    <rdf:RDF>
+      <cc:Work>
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+        <cc:license rdf:resource="http://creativecommons.org/licenses/publicdomain/"/>
+        <dc:publisher>
+          <cc:Agent rdf:about="http://openclipart.org/">
+            <dc:title>Openclipart</dc:title>
+          </cc:Agent>
+        </dc:publisher>
+        <dc:title>Shopping Bag #2</dc:title>
+        <dc:date>2011-09-18T09:01:18</dc:date>
+        <dc:description>Shopping bag illustration </dc:description>
+        <dc:source>http://openclipart.org/detail/161191/shopping-bag-2-by-gsagri04</dc:source>
+        <dc:creator>
+          <cc:Agent>
+            <dc:title>gsagri04</dc:title>
+          </cc:Agent>
+        </dc:creator>
+        <dc:subject>
+          <rdf:Bag>
+            <rdf:li>Bag</rdf:li>
+            <rdf:li>Money</rdf:li>
+            <rdf:li>Shop</rdf:li>
+            <rdf:li>Shopping</rdf:li>
+            <rdf:li>bazaar</rdf:li>
+            <rdf:li>clip art</rdf:li>
+            <rdf:li>clip-art</rdf:li>
+            <rdf:li>clipart</rdf:li>
+            <rdf:li>cosmetic</rdf:li>
+            <rdf:li>domain</rdf:li>
+            <rdf:li>goods</rdf:li>
+            <rdf:li>mall</rdf:li>
+            <rdf:li>materials</rdf:li>
+            <rdf:li>public</rdf:li>
+          </rdf:Bag>
+        </dc:subject>
+      </cc:Work>
+      <cc:License rdf:about="http://creativecommons.org/licenses/publicdomain/">
+        <cc:permits rdf:resource="http://creativecommons.org/ns#Reproduction"/>
+        <cc:permits rdf:resource="http://creativecommons.org/ns#Distribution"/>
+        <cc:permits rdf:resource="http://creativecommons.org/ns#DerivativeWorks"/>
+      </cc:License>
+    </rdf:RDF>
+  </metadata>
+</svg>
