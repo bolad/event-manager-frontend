@@ -10,6 +10,8 @@ export const EventList = ({events}) => {
         <EventItem 
           key={event.id}
           name={event.name}
+          start_date={event.start_date}
+          start_time={event.start_time}
           price={event.price}
           imageUrl={event.image.url}
         />

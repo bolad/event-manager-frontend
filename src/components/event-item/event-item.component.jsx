@@ -1,16 +1,28 @@
 import React from 'react';
+import CustomButton from '../custom-button/custom-button.component';
 
 import './event-item.styles.scss';
 
-const EventItem = ({ name, imageUrl, price }) => {
+const EventItem = ({ name, imageUrl, price, start_date, start_time }) => {
   return (
-    <div className="flex h-full bg-white rounded overflow-hidden shadow-lg">
+    <div className="flex h-full bg-white rounded overflow-hidden shadow-lg event-item-container">
       <div className="w-full md:w-1/3 rounded-t">
         <img src={imageUrl} alt="" className="w-full event-img" />
       </div>
-      <div className="w-full md:w-2/3 flex flex-col flex-grow flex-shrink">
-        <span className="name">{name}</span>
-        <span className="price">${price}</span>
+      <div className="w-full md:w-1/3 flex flex-col flex-grow flex-shrink event-item-props">
+        <h1 className="name">{name}</h1>
+        <span className="prop">Date: {start_date}</span>
+        <span className="prop">Time: {start_time}</span>
+        <span className="prop">Rate: {price} PLN</span>
+      </div>
+      <div className="w-full md:w-1/3 flex flex-col flex-grow flex-shrink">
+        <div className="event-description">
+          <span>In egestas erat imperdiet sed euismod. Non nisi est sit amet facilisis magna. Aliquet nec ullamcorper sit amet risus nullam. Sit amet facilisis magna etiam tempor orci eu. Praesent semper feugiat nibh sed pulvinar proin gravida. Tempus urna et pharetra pharetra massa massa ultricies mi quis. Tellus pellentesque eu tincidunt tortor aliquam nulla.</span>
+        </div>
+   
+        <div className="add-cart-btn">
+          <CustomButton>Add To Cart</CustomButton>
+        </div>
       </div>
     </div> 
   )
