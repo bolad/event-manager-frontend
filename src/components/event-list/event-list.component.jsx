@@ -1,20 +1,21 @@
 import React from 'react';
 import EventItem from '../event-item/event-item.component';
+import { Link } from 'react-router-dom';
+
 import './event-list.styles.scss';
 
 export const EventList = ({events}) => {
     return (
     <div className="event-list">
       {events.map(event =>
+      <Link to={`/events/${event.id}`}>
         <EventItem 
           key={event.id}
           name={event.name}
-          start_date={event.start_date}
-          start_time={event.start_time}
           price={event.price}
-          alloted_tickets={event.alloted_tickets}
           imageUrl={event.image.url}
         />
+        </Link>
       )}
     </div>
     )
