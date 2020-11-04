@@ -3,18 +3,16 @@ import { Link } from 'react-router-dom';
 import { ReactComponent as Logo } from '../../assets/crown.svg';
 import CartIcon from '../cart-icon/cart-icon.component';
 import CartDropdown from '../cart-dropdown/cart-dropdown.component';
-import { CartContext } from '../../contexts/cart/cart.context';
+import { CartContext } from '../../providers/cart/cart.provider';
 
 import axios from 'axios'
 
 import './header.styles.scss';
+import { useContext } from 'react';
 
 const Header = ({currentUser, handleLogout}) => {
   
-  const [hidden, setHidden] = useState(true);
-
-  //set a local state toggleHidden function that will be passed to cart context
-  const toggleHidden = () => setHidden(!hidden);
+  const { hidden } = useContext(CartContext);
   
   const handleLogoutClick = () => {
     axios.delete("http://localhost:3001/api/logout", { withCredentials: true })
@@ -47,14 +45,7 @@ const Header = ({currentUser, handleLogout}) => {
           SIGN IN
         </Link>
         )}
-        <CartContext.Provider 
-          value={{
-            hidden,
-            toggleHidden
-          }}
-        > 
-          <CartIcon />
-        </CartContext.Provider>
+        <CartIcon />
       </div>
       { hidden ? null : <CartDropdown /> }
   </div>

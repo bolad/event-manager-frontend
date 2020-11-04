@@ -8,6 +8,7 @@ export const EventList = ({events}) => {
     <div className="event-list">
       {events.map(event =>
         <EventItem 
+          event={event}
           key={event.id}
           name={event.name}
           start_date={event.start_date}

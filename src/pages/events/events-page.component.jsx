@@ -19,11 +19,6 @@ const EventsPage = () => {
       })
   }, [])
 
-  const match = useRouteMatch('/events/:id')  
-  const event = match     
-    ? events.find(event => event.id === Number(match.params.id))
-    : null
-
   const handleChange = e => {
     setSearchField(e.target.value)
   }
@@ -33,9 +28,6 @@ const EventsPage = () => {
 
   return (
     <div className="events-page">
-      <Route path="/events/:id">
-        <Event event={event} />
-      </Route>
       <EventSearch 
         placeholder="search for event"
         handleChange={handleChange}

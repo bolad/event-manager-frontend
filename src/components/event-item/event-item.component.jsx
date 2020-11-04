@@ -1,9 +1,13 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import CustomButton from '../custom-button/custom-button.component';
+import { CartContext } from '../../providers/cart/cart.provider';
 
 import './event-item.styles.scss';
 
-const EventItem = ({ name, imageUrl, price, start_date, start_time }) => {
+const EventItem = ({event, imageUrl}) => {
+  const { name, price, start_date, start_time } = event;
+  const { addItem } = useContext(CartContext);
+
   return (
     <div className="flex h-full bg-white rounded overflow-hidden shadow-lg event-item-container">
       <div className="w-full md:w-1/3 rounded-t">
@@ -21,7 +25,7 @@ const EventItem = ({ name, imageUrl, price, start_date, start_time }) => {
         </div>
    
         <div className="add-cart-btn">
-          <CustomButton>Add To Cart</CustomButton>
+          <CustomButton onClick={() => addItem(event)}>Add To Cart</CustomButton>
         </div>
       </div>
     </div> 
