@@ -15,7 +15,7 @@ const Header = ({currentUser, handleLogout}) => {
   const { hidden } = useContext(CartContext);
   
   const handleLogoutClick = () => {
-    axios.delete("http://localhost:3001/api/logout", { withCredentials: true })
+    axios.delete("https://bld-events-api.herokuapp.com/api/logout", { withCredentials: true })
       .then(response => {
         handleLogout();
       })

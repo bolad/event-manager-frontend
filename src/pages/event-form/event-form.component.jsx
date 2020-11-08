@@ -41,7 +41,7 @@ class EventForm extends React.Component {
     eventData.append('image', this.state.image, this.state.image.name )
 
     axios
-      .post("http://localhost:3001/api/events", eventData) 
+      .post("https://bld-events-api.herokuapp.com/api/events", eventData) 
       .then(response => {
         console.log("events response", response.data)
       })

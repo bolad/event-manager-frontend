@@ -5,6 +5,10 @@
   .composition {
     position: relative;
 
+    @media screen and (max-width: 800px) {
+        height: auto;
+      }
+
     &__photo {
         width: 55%;
         box-shadow: 0 1.5rem 4rem rgba(#f7f7f7, .4);
@@ -13,6 +17,11 @@
         z-index: 10;
         transition: all .2s;
         outline-offset: 1.2rem;
+
+        @media screen and (max-width: 850px) {
+            width: 100%;
+            height: auto;
+          }
 
         &--p1 {
             left: 0; //move in 0px from the left side of the container
@@ -58,6 +67,14 @@
         border-bottom: 1px solid #ff7730;
         padding: 3px;
         transition: all .3s;
+
+        @media screen and (max-width: 850px) {
+            font-size: 60%;
+            padding: 1px;
+            margin-bottom: 20px;
+            width:100%;
+            border-bottom: none;
+          }
     }
 
     &:hover {

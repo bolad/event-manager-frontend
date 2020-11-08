@@ -17,6 +17,13 @@
   justify-content: center;
   border-radius: 75px;
 
+  @media screen and (max-width: 950px) {
+    font-size: 40%;
+    width: 100%;
+    max-width: 100%;
+    display: block;
+  }
+
   &.google-sign-in {
     background-color: #4285f4;
     color: white;

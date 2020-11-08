@@ -24,7 +24,7 @@ const SignUp = () => {
   const handleSubmit = (event) => {
     event.preventDefault();
 
-    axios.post("http://localhost:3001/api/registrations", {
+    axios.post("https://bld-events-api.herokuapp.com/api/registrations", {
       user: {
         email,
         password,

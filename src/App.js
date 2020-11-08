@@ -26,7 +26,7 @@ const App = () => {
   }, [])
 
   const checkLoginStatus = () => {
-    axios.get("http://localhost:3001/api/logged_in", { withCredentials: true })
+    axios.get("https://bld-events-api.herokuapp.com/api/logged_in", { withCredentials: true })
       .then(response => {
         console.log('logged in?', response)
       })

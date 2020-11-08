@@ -21,12 +21,13 @@ const EventItem = ({event, imageUrl}) => {
       </div>
       <div className="w-full md:w-1/3 flex flex-col flex-grow flex-shrink">
         <div className="event-description">
-          <span>In egestas erat imperdiet sed euismod. Non nisi est sit amet facilisis magna. Aliquet nec ullamcorper sit amet risus nullam. Sit amet facilisis magna etiam tempor orci eu. Praesent semper feugiat nibh sed pulvinar proin gravida. Tempus urna et pharetra pharetra massa massa ultricies mi quis. Tellus pellentesque eu tincidunt tortor aliquam nulla.</span>
+          <span>In egestas erat imperdiet sed euismod. Non nisi est sit amet facilisis magna. Aliquet nec ullamcorper sit amet risus nullam. Sit amet facilisis magna etiam tempor orci eu. Praesent semper feugiat nibh sed pulvinar proin gravida.</span>
         </div>
    
         <div className="add-cart-btn">
           <CustomButton onClick={() => addItem(event)}>Add To Cart</CustomButton>
         </div>
+        
       </div>
     </div> 
   )
