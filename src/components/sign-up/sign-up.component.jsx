@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { withRouter } from 'react-router-dom';
 import axios from 'axios'
 
 import FormInput from '../form-input/form-input.component';
@@ -6,7 +7,7 @@ import CustomButton from '../custom-button/custom-button.component';
 
 import './sign-up.styles.scss'
 
-const SignUp = () => {
+const SignUp = ({history}) => {
   const [user, setUser] = useState(null)
   const [userCredentials, setUserCredentials] = useState({
     email: "",

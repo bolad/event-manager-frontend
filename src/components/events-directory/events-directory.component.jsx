@@ -5,14 +5,14 @@ import './events-directory.styles.scss';
 const EventsDirectory = () => {
 
   return (
-    <div class="directory-menu">
+    <div className="directory-menu">
         <div style={
           {width: 'calc((100% - 6rem) / 2)'}
         }>
-            <h3 class="heading-tertiary u-margin-bottom-small">
+            <h3 className="heading-tertiary u-margin-bottom-small">
                 All your favourite events on one platform. Awesome!!!
             </h3>
-            <p class="paragraph">
+            <p className="paragraph">
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
                 Magnam, nesciunt asperiores. Iusto mollitia nesciunt aut, 
                 quia distinctio labore quis nisi ut necessitatibus ipsam delectus 
@@ -28,12 +28,12 @@ const EventsDirectory = () => {
         <div style={
           {width: 'calc((100% - 6rem) / 2)'}
         }>
-            <div class="composition">
-                <img src="https://i.ibb.co/17Ybhzy/music2.jpg" alt="Photo 1" class="composition__photo composition__photo--p1" />
-                <img src="https://i.ibb.co/9Wx6FWD/sports.jpg" alt="Photo 2" class="composition__photo composition__photo--p2" />
-                <img src="https://i.ibb.co/D9L07MX/tech.jpg" alt="Photo 3" class="composition__photo composition__photo--p3" />
-                <img src="https://i.ibb.co/CPDpp4z/blm3.jpg" alt="Photo 3" class="composition__photo composition__photo--p4" />
-                <img src="https://i.ibb.co/yq3Qr2D/mike-von-Osjura-Wm-Xm-U-unsplash.jpg" alt="Photo 3" class="composition__photo composition__photo--p5" />
+            <div className="composition">
+                <img src="https://i.ibb.co/17Ybhzy/music2.jpg" alt="Photo 1" className="composition__photo composition__photo--p1" />
+                <img src="https://i.ibb.co/9Wx6FWD/sports.jpg" alt="Photo 2" className="composition__photo composition__photo--p2" />
+                <img src="https://i.ibb.co/D9L07MX/tech.jpg" alt="Photo 3" className="composition__photo composition__photo--p3" />
+                <img src="https://i.ibb.co/CPDpp4z/blm3.jpg" alt="Photo 3" className="composition__photo composition__photo--p4" />
+                <img src="https://i.ibb.co/yq3Qr2D/mike-von-Osjura-Wm-Xm-U-unsplash.jpg" alt="Photo 3" className="composition__photo composition__photo--p5" />
             </div>
         </div>
     </div>

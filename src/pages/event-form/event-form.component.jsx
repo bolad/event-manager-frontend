@@ -1,105 +1,138 @@
-import React, {useState} from 'react';
-import axios from 'axios'
-
-import FormInput from '../../components/form-input/form-input.component'
-import CustomButton from '../../components/custom-button/custom-button.component';
+import React, { useState } from 'react'
+import eventService from '../../services/event-service'
 
 import './event-form.styles.scss'
 
-class EventForm extends React.Component {
-  constructor() {
-    super();
+const EventForm = ({createEvent}) => {
+  const [name, setName] = useState('')
+  const [price, setPrice] = useState('')
+  const [start_date, setStartDate] = useState('')
+  const [start_time, setStartTime] = useState('')
+  const [alloted_tickets, setAllotedTickets] = useState('')
+  const [sold_out_tickets, setSoldOutTickets] = useState('')
 
-    this.state = {
-      name: '',
-      price: '',
-      alloted_tickets: '',
-      sold_out_tickets: '',
-      start_at: '',
-      image: null
+  const [eventItems, setEventItems] = useState([]);
+
+  const addEvent = async (e, name, price, start_date, start_time, alloted_tickets, sold_out_tickets) => {
+    try {
+      e.preventDefault()
+
+      const eventObject = {
+        name: name,
+        price: price,
+        start_date: start_date,
+        start_time: start_time,
+        alloted_tickets: alloted_tickets,
+        sold_out_tickets: sold_out_tickets,
+      }
+
+      const response = await eventService.createEvent(eventObject)
+      console.log(response)
+
+      setEventItems(eventItems.concat(response))
+      setName('')
+      setPrice('')
+      setStartDate('')
+      setStartTime('')
+      setAllotedTickets('')
+      setSoldOutTickets('')
+    }
+    catch (exception) {
+      console.log(exception)
     }
   }
 
+  return (
+    <div className="event-form">
+      <h2>Create an event</h2>
 
-  fileSelectHandler = event => {
-    this.setState({
-      image: event.target.files[0]
-    })
-  }
+      <form onSubmit={addEvent}>
+        <div>
+          <label htmlFor="event_name">
+            <span>Name of event:</span>
+            <input 
+              type="text" 
+              value={name} 
+              id="event_name" 
+              onChange={({ target }) => {
+                setName(target.value)
+              }}
+            />
+          </label>
+        </div>
+        <div>
+          <label htmlFor="event_date">
+            <span>Date:</span>
+            <input 
+              type="text" 
+              value={start_date} 
+              id="event_date" 
+              onChange={({ target }) => {
+                setStartDate(target.value)
+              }}
+            />
+          </label>
+        </div>
+        <div>
+          <label htmlFor="event_time">
+            <span>Time:</span>
+            <input 
+              type="text" 
+              value={start_time} 
+              id="event_time" 
+              onChange={({ target }) => {
+                setStartTime(target.value)
+              }}
+            />
+          </label>
+        </div>
+        <div>
+          <label htmlFor="price">
+            <span>Price:</span>
+            <input 
+              type="number" 
+              value={price} 
+              id="alloted_tickets" 
+              onChange={({ target }) => {
+                setPrice(target.value)
+              }}
+            />
+          </label>
+        </div>
+        <div>
+          <label htmlFor="alloted_tickets">
+            <span>Alloted Ticets:</span>
+            <input 
+              type="number" 
+              value={alloted_tickets} 
+              id="alloted_tickets" 
+              onChange={({ target }) => {
+                setAllotedTickets(target.value)
+              }}
+            />
+          </label>
+        </div>
+        <div>
+          <label htmlFor="sold_out_tickets">
+            <span>Ticets Sold:</span>
+            <input 
+              type="number" 
+              value={sold_out_tickets} 
+              id="sold_out_tickets" 
+              onChange={({ target }) => {
+                setSoldOutTickets(target.value)
+              }}
+            />
+          </label>
+        </div>
 
-  handleChange = (event) => {
-    this.setState({
-      [event.target.name]: event.target.value
-    })
-  }
-
-  handleSubmit = (event) => {
-    event.preventDefault();
-    
-    const eventData = new FormData();
-
-    eventData.append('image', this.state.image, this.state.image.name )
-
-    axios
-      .post("https://bld-events-api.herokuapp.com/api/events", eventData) 
-      .then(response => {
-        console.log("events response", response.data)
-      })
-  }
- 
-  render() {
-    return (
-      <div className="event-form">
-        <h2>Create an event</h2>
-        <form onSubmit={this.handleSubmit}>
-          <FormInput
-              name='name'
-              type='text'
-              onChange={this.handleChange}
-              value={this.state.name}
-              label='name'
-              required
-          />
-          <FormInput
-              name='price'
-              type='number'
-              value={this.state.price}
-              onChange={this.handleChange}
-              label='price'
-              required
-          />
-           <FormInput
-              name='alloted_tickets'
-              type='text'
-              onChange={this.handleChange}
-              value={this.state.alloted_tickets}
-              label='alloted tickets'
-              required
-          />
-          <FormInput
-              name='sold_out_tickets'
-              type='text'
-              onChange={this.handleChange}
-              value={this.state.sold_out_tickets}
-              label='sold-out tickets'
-              required
-          />
-          <FormInput
-              name='image'
-              type='file'
-              onChange={this.fileSelectHandler}
-              value={this.state.image}
-              required
-          />
-          <div className="buttons">
-            <CustomButton type="submit">Add Event</CustomButton>
-          </div>
-        </form>
-      </div>
-    )
-  }
+        <div className="form-actions">
+          <button type="submit">Save</button>
+        </div>
+      </form>
+    </div>
+  )
 
 }
-
 
 export default EventForm;

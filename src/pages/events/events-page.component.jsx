@@ -1,9 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import { Switch, Route, useRouteMatch } from 'react-router-dom';
 import eventService from '../../services/event-service';
 import { EventList } from '../../components/event-list/event-list.component'
 import { EventSearch } from '../../components/event-search/event-search.component';
-import Event from '../event/event.component';
 
 import './events-page.styles.scss'
 
@@ -32,6 +30,7 @@ const EventsPage = () => {
         placeholder="search for event"
         handleChange={handleChange}
       />
+      <br/><br/>
       <EventList events={filteredEvents}/>
     </div>
   )

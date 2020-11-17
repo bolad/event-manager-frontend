@@ -36,7 +36,7 @@ const CartProvider = ({ children }) => {
   useEffect(() => {
     setCartItemsCount(getCartItemsCount(cartItems));
     setCartTotal(getCartTotal(cartItems));
-    window.localStorage.setItem('cartItems', JSON.stringify(cartItems))
+    //window.localStorage.setItem('cartItems', JSON.stringify(cartItems))
   }, [cartItems]);
 
   return (
