@@ -1,19 +1,17 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import { ReactComponent as Logo } from '../../assets/crown.svg';
 import CartIcon from '../cart-icon/cart-icon.component';
 import CartDropdown from '../cart-dropdown/cart-dropdown.component';
-import { CartContext } from '../../providers/cart/cart.provider';
+
+import { connect } from 'react-redux';
 
 import axios from 'axios'
 
 import './header.styles.scss';
-import { useContext } from 'react';
 
-const Header = ({currentUser, handleLogout}) => {
-  
-  const { hidden } = useContext(CartContext);
-  
+const Header = ({currentUser, handleLogout, hidden}) => {
+    
   const handleLogoutClick = () => {
     axios.delete("https://bld-events-api.herokuapp.com/api/logout", { withCredentials: true })
       .then(response => {
@@ -52,4 +50,8 @@ const Header = ({currentUser, handleLogout}) => {
   )
 };
 
-export default Header;
+const mapStateToProps = ({cart: {hidden}}) => ({
+  hidden
+})
+
+export default connect(mapStateToProps)(Header);
