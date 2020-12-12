@@ -17,7 +17,7 @@ const EventItem = ({event, imageUrl}) => {
         <h1 className="name">{name}</h1>
         <span className="prop">Date: {start_date}</span>
         <span className="prop">Time: {start_time}</span>
-        <span className="prop">Rate: {price} PLN</span>
+        <span className="prop">Rate: ${price}</span>
       </div>
       <div className="w-full md:w-1/3 flex flex-col flex-grow flex-shrink">
         <div className="event-description">

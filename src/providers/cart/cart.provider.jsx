@@ -23,7 +23,7 @@ const fetchCartItemsFromLocalStorage = JSON.parse(localStorage.getItem('cartItem
 
 const CartProvider = ({ children }) => {
   const [hidden, setHidden] = useState(true);
-  const [cartItems, setCartItems] = useState(fetchCartItemsFromLocalStorage);
+  const [cartItems, setCartItems] = useState([]);
   const [cartItemsCount, setCartItemsCount] = useState(0);
   const [cartTotal, setCartTotal] = useState(0);
 
@@ -36,7 +36,7 @@ const CartProvider = ({ children }) => {
   useEffect(() => {
     setCartItemsCount(getCartItemsCount(cartItems));
     setCartTotal(getCartTotal(cartItems));
-    //window.localStorage.setItem('cartItems', JSON.stringify(cartItems))
+    window.localStorage.setItem('cartItems', JSON.stringify(cartItems))
   }, [cartItems]);
 
   return (
