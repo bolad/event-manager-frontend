@@ -1,12 +1,13 @@
 import React, { useContext } from 'react';
 import CustomButton from '../custom-button/custom-button.component';
-import { CartContext } from '../../providers/cart/cart.provider';
+import { connect } from 'react-redux';
+
+import { addItem } from '../../redux/cart/cart.actions';
 
 import './event-item.styles.scss';
 
-const EventItem = ({event, imageUrl}) => {
+const EventItem = ({event, imageUrl, addItem}) => {
   const { name, price, start_date, start_time } = event;
-  const { addItem } = useContext(CartContext);
 
   return (
     <div className="flex h-full bg-white rounded overflow-hidden shadow-lg event-item-container">
@@ -33,4 +34,8 @@ const EventItem = ({event, imageUrl}) => {
   )
 }
 
-export default EventItem;
+const mapDispatchToProps = dispatch => ({
+  addItem: event => dispatch(addItem(event))
+})
+
+export default connect(null, mapDispatchToProps)(EventItem);
