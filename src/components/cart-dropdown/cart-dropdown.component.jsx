@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 
 import CustomButton from '../custom-button/custom-button.component';
 import CartItem from '../cart-item/cart-item.component';
+import { selectCartItems, selectCartItemsCount } from '../../redux/cart/cart.selectors';
 import { toggleCartHidden } from '../../redux/cart/cart.actions';
 
 import './cart-dropdown.styles.scss';
@@ -37,8 +38,8 @@ const CartDropdown = ({ history, cartItems, dispatch }) => {
   );
 }
 
-const mapStateToProps = ({cart: {cartItems}}) => ({
-  cartItems
+const mapStateToProps = state => ({
+  cartItems: selectCartItems(state)
 })
 
 export default withRouter(connect(mapStateToProps)(CartDropdown));
