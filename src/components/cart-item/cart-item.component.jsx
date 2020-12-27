@@ -1,8 +1,9 @@
 import React from 'react';
+import { connect } from 'react-redux';
 import { clearItemFromCart } from '../../redux/cart/cart.actions';
 import './cart-item.styles.scss';
 
-const CartItem = ({ event, imageUrl }) => {
+const CartItem = ({ event, imageUrl, clearItem }) => {
   const {price, name, quantity} = event;
 
   return (
@@ -15,8 +16,8 @@ const CartItem = ({ event, imageUrl }) => {
       </span>
     </div>
     <div
-        className='remove-button'
-        onClick={() => clearItemFromCart(event)}
+        className='remove-item'
+        onClick={() => clearItem(event)}
       >
         &#10005;
       </div>
@@ -24,4 +25,8 @@ const CartItem = ({ event, imageUrl }) => {
   )
 };
 
-export default CartItem;
+const mapDispatchToProps = dispatch => ({
+  clearItem: item => dispatch(clearItemFromCart(item))
+});
+
+export default connect(null, mapDispatchToProps)(CartItem);
