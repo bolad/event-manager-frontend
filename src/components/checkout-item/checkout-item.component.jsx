@@ -1,12 +1,14 @@
-import React, { useContext } from 'react';
+import React from 'react';
+import { connect } from 'react-redux';
+import { clearItemFromCart, addItem, removeItem } from '../../redux/cart/cart.actions';
 
-import { CartContext } from '../../providers/cart/cart.provider';
+//import { CartContext } from '../../providers/cart/cart.provider';
 
 import './checkout-item.styles.scss';
 
-const CheckoutItem = ({ imageUrl, cartItem }) => {
+const CheckoutItem = ({ imageUrl, cartItem, clearItem, addItem, removeItem }) => {
   const { name, price, quantity } = cartItem;
-  const { addItem, removeItem, clearItemFromCart } = useContext(CartContext);
+  //const { addItem, removeItem, clearItemFromCart } = useContext(CartContext);
 
   return (
     <div className='checkout-item'>
@@ -28,7 +30,7 @@ const CheckoutItem = ({ imageUrl, cartItem }) => {
         className='remove-button'
         onClick={() => clearItemFromCart(cartItem)}
       >
-        &#10005;
+        &#10008;
       </div>
     </div>
   );
