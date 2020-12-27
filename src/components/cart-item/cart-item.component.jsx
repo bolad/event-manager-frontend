@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { clearItemFromCart } from '../../redux/cart/cart.actions';
 import './cart-item.styles.scss';
 
 const CartItem = ({ event, imageUrl }) => {
@@ -14,6 +14,12 @@ const CartItem = ({ event, imageUrl }) => {
         {quantity} x ${price}
       </span>
     </div>
+    <div
+        className='remove-button'
+        onClick={() => clearItemFromCart(event)}
+      >
+        &#10005;
+      </div>
   </div>
   )
 };
