@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
-import { withRouter } from 'react-router-dom';
+import { useHistory } from "react-router-dom";
+
 import axios from 'axios'
 
 import FormInput from '../form-input/form-input.component';
@@ -7,7 +8,7 @@ import CustomButton from '../custom-button/custom-button.component';
 
 import './sign-up.styles.scss'
 
-const SignUp = ({history}) => {
+const SignUp = () => {
   const [user, setUser] = useState(null)
   const [userCredentials, setUserCredentials] = useState({
     email: "",
@@ -16,6 +17,8 @@ const SignUp = ({history}) => {
   })
 
   const { email, password, password_confirmation } = userCredentials;
+
+  const history = useHistory();
 
   const handleChange = (event) => {
     const { name, value } = event.target
@@ -41,11 +44,7 @@ const SignUp = ({history}) => {
       )
 
       setUser(user)
-      setUserCredentials({
-        email: "",
-        password: "",
-        password_confirmation: ""
-      })
+      history.push("/");
       
     }).catch(error => {
       console.log("registration error", error)
