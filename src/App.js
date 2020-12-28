@@ -46,10 +46,11 @@ const App = () => {
 
   return (
     <div>
-    <Header 
+      <Header 
       currentUser={currentUser}  
       handleLogout={handleLogout}
     />
+   
     <Switch>
       <Route exact path='/' component={HomePage} />
       <Route exact path='/checkout' component={CheckoutPage} />
