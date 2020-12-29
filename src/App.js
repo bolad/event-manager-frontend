@@ -40,9 +40,9 @@ const App = () => {
     setCurrentUser(null)
   }
 
-  useEffect(() => {
-    checkLoginStatus();
-  }, [])
+  // useEffect(() => {
+  //   checkLoginStatus();
+  // }, [])
 
   return (
     <div>
