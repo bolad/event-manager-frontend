@@ -24,15 +24,15 @@ const App = () => {
     }
   }, [])
 
-  const checkLoginStatus = () => {
-    axios.get("https://bld-events-api.herokuapp.com/api/logged_in", { withCredentials: true })
-      .then(response => {
-        console.log('logged in?', response)
-      })
-      .catch(error => {
-        console.log("check logged in error", error)
-      })
-  }
+  // const checkLoginStatus = () => {
+  //   axios.get("https://bld-events-api.herokuapp.com/api/logged_in", { withCredentials: true })
+  //     .then(response => {
+  //       console.log('logged in?', response)
+  //     })
+  //     .catch(error => {
+  //       console.log("check logged in error", error)
+  //     })
+  // }
 
   const handleLogout = () => {
     window.localStorage.removeItem('loggedUser')

@@ -1,4 +1,5 @@
 import axios from 'axios'
+//const baseUrl = 'http://localhost:3001/api/events'
 const baseUrl = 'https://bld-events-api.herokuapp.com/api/events'
 
 const getAll = async() => {
