@@ -14,7 +14,7 @@ export const EventList = ({events}) => {
           start_date={event.start_date}
           start_time={event.start_time}
           price={event.price}
-          imageUrl={event.image.url}
+          imageUrl={event.image}
         />
       )}
     </div>

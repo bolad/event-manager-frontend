@@ -21,9 +21,9 @@ const EventsDirectory = () => {
                 Eaque eligendi quasi perferendis harum reiciendis minus 
                 temporibus in at est, doloremque et vel, aut debitis, vitae 
                 ducimus earum illum pariatur amet?
-            </p>
+            </p><br/>
 
-            <a href="#" class="btn-text">Learn more &rarr;</a>
+            <a href="#" className="btn-text">Learn more &rarr;</a>
         </div>
         <div style={
           {width: 'calc((100% - 6rem) / 2)'}

@@ -19,7 +19,7 @@ const CartDropdown = ({ history, cartItems, dispatch }) => {
             <CartItem 
               event={cartItem}
               key={cartItem.id} 
-              imageUrl={cartItem.image.url}
+              imageUrl={cartItem.image}
             />
           ))
         ) : (

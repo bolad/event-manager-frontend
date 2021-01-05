@@ -10,9 +10,9 @@ const EventItem = ({event, imageUrl, addItem}) => {
   const { name, price, start_date, start_time } = event;
 
   return (
-    <div className="flex h-full bg-white rounded overflow-hidden shadow-lg event-item-container">
+    <div className="flex h-full bg-white rounded overflow-hidden h-60 shadow-lg event-item-container">
       <div className="w-full md:w-1/3 rounded-t">
-        <img src={imageUrl} alt="" className="w-full event-img" />
+        <img src={imageUrl} alt="event image" className="w-full event-img" />
       </div>
       <div className="w-full md:w-1/3 flex flex-col flex-grow flex-shrink event-item-props">
         <h1 className="name">{name}</h1>
