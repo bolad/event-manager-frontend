@@ -9,6 +9,7 @@ import Header from './components/header/header.component';
 import SignInAndSignUpPage from './pages/signin-sign-up/sign-in-and-sign-up.component';
 import CheckoutPage from './pages/checkout/checkout.component';
 import EventForm from './pages/event-form/event-form.component';
+import Contact from './pages/contact/contact.component';
 
 import './App.css';
 
@@ -55,6 +56,7 @@ const App = () => {
       <Route exact path='/' component={HomePage} />
       <Route exact path='/checkout' component={CheckoutPage} />
       <Route path='/events' component={EventsPage} />
+      <Route path='/contact' component={Contact} />
       <Route path='/event-form' component={EventForm} />
       <Route 
         exact 
